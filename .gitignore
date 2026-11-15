@@ -1,0 +1,10 @@
+AGENTS.md
+CLAUDE.md
+.claude/
+.impeccable/
+graphify-out/
+_archive/
+_labs/
+.vercel/
+__pycache__/
+*.pyc

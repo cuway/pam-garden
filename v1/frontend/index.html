@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c1a12">
+<title>Pam's Garden — Kiểng lá / Foliage plants</title>
+<meta name="description" content="Pam's Garden: vườn nhỏ kiểng lá làm vì đam mê. A small foliage garden run for passion.">
+<link rel="icon" href="assets/img/logo/logo-ink.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+document.documentElement.classList.add("js");
+(function(){
+  var root=document.documentElement,saved;
+  try{saved=localStorage.getItem("lang")}catch(e){}
+  function setLang(l){
+    root.lang=l;
+    try{localStorage.setItem("lang",l)}catch(e){}
+    document.querySelectorAll("[data-set]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.set===l))});
+  }
+  document.addEventListener("DOMContentLoaded",function(){
+    setLang(saved==="en"?"en":"vi");
+    document.querySelectorAll("[data-set]").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.set)})});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting||e.boundingClientRect.top<0){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+    document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+  });
+})();
+</script>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/","lenis":"https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.mjs"}}
+</script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+
+<div class="tag" aria-hidden="true"></div>
+<div class="gate" role="button" tabindex="0" aria-label="Vào vườn / Enter the garden">
+  <div class="gate-in">
+    <p class="gate-k"><span class="vi">nơi lưu giữ đam mê</span><span class="en">where passion is kept</span></p>
+    <h2 class="gate-t">Pam's Garden</h2>
+    <span class="gate-ring"><i></i></span>
+    <p class="gate-c"><span class="vi touch-no">Nhấp để vào vườn</span><span class="vi touch-yes">Chạm để vào vườn</span><span class="en touch-no">Click to enter</span><span class="en touch-yes">Tap to enter</span></p>
+  </div>
+</div>
+<div class="fly" aria-hidden="true"><i class="fly-ret"></i><p class="fly-st"></p><p class="fly-alt"><b>12 000</b> m</p><button class="fly-skip" type="button"><span class="vi">Bỏ qua</span><span class="en">Skip</span></button></div>
+<div class="hint" aria-hidden="true"><i></i><p><span class="vi">Cuộn hoặc lướt</span><span class="en">Scroll or swipe</span></p></div>
+
+
+<header class="bar">
+  <a class="mark" href="#story" aria-label="Pam's Garden">
+    <img class="logo" src="assets/img/logo/logo-bone.png" alt="" width="44" height="44">
+    <span>Pam's Garden</span>
+  </a>
+  <nav>
+    <a class="link" href="#story"><span class="vi">Câu chuyện</span><span class="en">Story</span></a>
+    <a class="link" href="#care"><span class="vi">Chăm cây</span><span class="en">Care</span></a>
+    <a class="link" href="#contact"><span class="vi">Liên hệ</span><span class="en">Contact</span></a>
+    <button class="snd" type="button" aria-pressed="false" aria-label="Âm thanh / Sound" title="Âm thanh / Sound"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5z"/><path class="w1" d="M15.5 9.2a4 4 0 0 1 0 5.6"/><path class="w2" d="M18 6.8a7.4 7.4 0 0 1 0 10.4"/><path class="x" d="M16 9.5l5 5M21 9.5l-5 5"/></svg></button>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="vi" aria-pressed="true">VI</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="story" id="story" aria-label="Câu chuyện của vườn / the story of the garden">
+    <div class="stage">
+      <article class="panel hero-panel on" data-side="left">
+        <h1>
+          <span class="vi">Kiểng lá nhỏ, trồng bằng <em>đam mê.</em></span>
+          <span class="en">Small foliage, grown for <em>love.</em></span>
+        </h1>
+        <p class="lede">
+          <span class="vi">Pam's Garden là vườn kiểng lá nhỏ, làm vì đam mê. Chỉ những cây mình thật sự trồng và yêu.</span>
+          <span class="en">Pam's Garden is a small foliage garden run for passion. Only plants we truly grow and love.</span>
+        </p>
+        <p class="tagline"><span class="vi">Mỗi chiếc lá là một tác phẩm – Mang hơi thở rừng xanh vào từng góc nhỏ nhà bạn.</span><span class="en">Every leaf is a work of art – bringing the breath of the green forest into every corner of your home.</span></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact"><span class="vi">Nhắn hỏi cây</span><span class="en">Ask about plants</span></a>
+          <a class="btn btn-ghost" href="#care"><span class="vi">Cách chăm cây</span><span class="en">How to care</span></a>
+        </div>
+        <div class="gallery"><img src="assets/img/bloom/hero-1.webp" alt="Lá trong vườn 1 / garden leaf 1" width="320" height="480" loading="lazy"><img src="assets/img/bloom/hero-2.webp" alt="Lá trong vườn 2 / garden leaf 2" width="320" height="480" loading="lazy"><img src="assets/img/bloom/hero-3.webp" alt="Lá trong vườn 3 / garden leaf 3" width="320" height="480" loading="lazy"><img src="assets/img/bloom/hero-4.webp" alt="Lá trong vườn 4 / garden leaf 4" width="320" height="480" loading="lazy"></div>
+      </article>
+      <article class="panel" data-side="right">
+        <p class="no">01 / 05 · <span class="vi">Xuân</span><span class="en">Spring</span></p>
+        <h2 class="title">Monstera</h2>
+        <p class="latin"><span class="vi">lá loang</span><span class="en">variegated</span></p>
+        <div class="beats"><p class="beat"><span class="vi">Lá xẻ thùy, loang mảng kem và vàng xen xanh.</span><span class="en">Split leaves marbled with cream and yellow over green.</span></p><p class="beat"><span class="vi">Mỗi chiếc lá mới mở ra một khác. Mình chờ nó như chờ một món quà.</span><span class="en">Every new leaf unfurls differently. We wait for it like a small gift.</span></p></div>
+        <div class="gallery"><img src="assets/img/bloom/monstera-1.webp" alt="Lá Monstera 1 / Monstera leaf 1" width="320" height="480" loading="lazy"><img src="assets/img/bloom/monstera-2.webp" alt="Lá Monstera 2 / Monstera leaf 2" width="320" height="480" loading="lazy"><img src="assets/img/bloom/monstera-3.webp" alt="Lá Monstera 3 / Monstera leaf 3" width="320" height="480" loading="lazy"><img src="assets/img/bloom/monstera-4.webp" alt="Lá Monstera 4 / Monstera leaf 4" width="320" height="480" loading="lazy"><img src="assets/img/bloom/monstera-5.webp" alt="Lá Monstera 5 / Monstera leaf 5" width="320" height="480" loading="lazy"><img src="assets/img/bloom/monstera-core.webp" alt="Lá Monstera 6 / Monstera leaf 6" width="320" height="480" loading="lazy"></div>
+      </article>
+      <article class="panel" data-side="left">
+        <p class="no">02 / 05 · <span class="vi">Nắng hạ</span><span class="en">Summer sun</span></p>
+        <h2 class="title">Anthurium</h2>
+        <p class="latin"><span class="vi">lá nhung</span><span class="en">velvet leaf</span></p>
+        <div class="beats"><p class="beat"><span class="vi">Lá hình tim phủ nhung, gân sáng nổi trên nền xanh sẫm.</span><span class="en">Velvety heart-shaped leaves with pale veins on deep green.</span></p><p class="beat"><span class="vi">Nhung dày, gân sáng nổi lên như nét vẽ trên nền lá tối.</span><span class="en">Thick velvet, pale veins standing out like brush strokes on a dark leaf.</span></p></div>
+        <div class="gallery"><img src="assets/img/bloom/anthurium-1.webp" alt="Lá Anthurium 1 / Anthurium leaf 1" width="320" height="480" loading="lazy"><img src="assets/img/bloom/anthurium-2.webp" alt="Lá Anthurium 2 / Anthurium leaf 2" width="320" height="480" loading="lazy"><img src="assets/img/bloom/anthurium-3.webp" alt="Lá Anthurium 3 / Anthurium leaf 3" width="320" height="480" loading="lazy"><img src="assets/img/bloom/anthurium-4.webp" alt="Lá Anthurium 4 / Anthurium leaf 4" width="320" height="480" loading="lazy"><img src="assets/img/bloom/anthurium-5.webp" alt="Lá Anthurium 5 / Anthurium leaf 5" width="320" height="480" loading="lazy"></div>
+      </article>
+      <article class="panel" data-side="right">
+        <p class="no">03 / 05 · <span class="vi">Mưa</span><span class="en">Rain</span></p>
+        <h2 class="title">Begonia</h2>
+        <p class="latin"><span class="vi">lá đốm</span><span class="en">speckled leaf</span></p>
+        <div class="beats"><p class="beat"><span class="vi">Lá tròn gợn, loang đốm sáng trên nền xanh.</span><span class="en">Rounded, textured leaves speckled with pale patches.</span></p><p class="beat"><span class="vi">Mỗi cụm một khác: đốm bạc, viền gợn, màu lá đậm nhạt.</span><span class="en">No two clumps alike: silver spots, rippled edges, deeper or paler greens.</span></p></div>
+        <div class="gallery"><img src="assets/img/bloom/begonia-1.webp" alt="Lá Begonia 1 / Begonia leaf 1" width="320" height="480" loading="lazy"><img src="assets/img/bloom/begonia-2.webp" alt="Lá Begonia 2 / Begonia leaf 2" width="320" height="480" loading="lazy"><img src="assets/img/bloom/begonia-3.webp" alt="Lá Begonia 3 / Begonia leaf 3" width="320" height="480" loading="lazy"><img src="assets/img/bloom/begonia-4.webp" alt="Lá Begonia 4 / Begonia leaf 4" width="320" height="480" loading="lazy"><img src="assets/img/bloom/begonia-5.webp" alt="Lá Begonia 5 / Begonia leaf 5" width="320" height="480" loading="lazy"><img src="assets/img/bloom/begonia-core.webp" alt="Lá Begonia 6 / Begonia leaf 6" width="320" height="480" loading="lazy"></div>
+      </article>
+      <article class="panel" data-side="left">
+        <p class="no">04 / 05 · <span class="vi">Thu</span><span class="en">Autumn</span></p>
+        <h2 class="title"><span class="vi">Lan &amp; súng</span><span class="en">Orchid &amp; lily</span></h2>
+        <p class="latin"><span class="vi">hoa của vườn</span><span class="en">garden flowers</span></p>
+        <div class="beats"><p class="beat"><span class="vi">Ngoài kiểng lá, vườn còn vài chậu hoa: lan trắng bên cửa sổ, súng tím trong chậu đất nung.</span><span class="en">Besides foliage, a few flowers: a white orchid by the window, a purple water lily in a terracotta pot.</span></p><p class="beat"><span class="vi">Thỉnh thoảng một bông nở, và cả góc nhà sáng lên.</span><span class="en">Now and then a bloom opens and the whole corner brightens.</span></p></div>
+        <div class="gallery"><img src="assets/img/bloom/orchid-1.webp" alt="Hoa lan và súng 1 / Orchid and water lily 1" width="320" height="480" loading="lazy"><img src="assets/img/bloom/orchid-2.webp" alt="Hoa lan và súng 2 / Orchid and water lily 2" width="320" height="480" loading="lazy"><img src="assets/img/bloom/orchid-3.webp" alt="Hoa lan và súng 3 / Orchid and water lily 3" width="320" height="480" loading="lazy"><img src="assets/img/bloom/orchid-4.webp" alt="Hoa lan và súng 4 / Orchid and water lily 4" width="320" height="480" loading="lazy"><img src="assets/img/bloom/orchid-5.webp" alt="Hoa lan và súng 5 / Orchid and water lily 5" width="320" height="480" loading="lazy"></div>
+      </article>
+      <article class="panel" data-side="right">
+        <p class="no">05 / 05 · <span class="vi">Đông</span><span class="en">Winter</span></p>
+        <h2 class="title"><span class="vi">Một vòng quanh vườn</span><span class="en">A walk around the garden</span></h2>
+        <p class="latin"><span class="vi">từ vườn</span><span class="en">from the garden</span></p>
+        <div class="beats"><p class="beat"><span class="vi">Kệ cây, khay chậu, góc chiều tối: những gì mình thấy mỗi ngày.</span><span class="en">Shelves, trays, an evening corner: what we see every day.</span></p><p class="beat"><span class="vi">Thích chiếc lá nào, cứ nhắn mình.</span><span class="en">If a leaf catches your eye, just message us.</span></p></div>
+        <div class="gallery"><img src="assets/img/bloom/garden-1.webp" alt="Góc vườn 1 / Garden corner 1" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-2.webp" alt="Góc vườn 2 / Garden corner 2" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-3.webp" alt="Góc vườn 3 / Garden corner 3" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-4.webp" alt="Góc vườn 4 / Garden corner 4" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-5.webp" alt="Góc vườn 5 / Garden corner 5" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-6.webp" alt="Góc vườn 6 / Garden corner 6" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-7.webp" alt="Góc vườn 7 / Garden corner 7" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-8.webp" alt="Góc vườn 8 / Garden corner 8" width="320" height="480" loading="lazy"><img src="assets/img/bloom/garden-9.webp" alt="Góc vườn 9 / Garden corner 9" width="320" height="480" loading="lazy"></div>
+      </article>
+      <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </section>
+
+  <section class="seasons" id="seasons" aria-label="Pam's Garden">
+  <div class="stage">
+    <article class="season finale">
+      <p class="kick">Pam's Garden</p>
+      <h2 class="big"><span class="vi">Nơi lưu giữ đam mê</span><span class="en">Where passion is kept</span></h2>
+      <p class="line"><span class="vi">Xuân, hạ, thu, đông, mưa hay nắng, vườn vẫn ở đây.</span><span class="en">Spring, summer, autumn, winter, rain or shine, the garden stays.</span></p>
+    </article>
+  </div>
+</section>
+
+<section class="care" id="care">
+    <h2 class="tw"><span class="vi">Chăm cây, nói gọn.</span><span class="en">Care, in brief.</span></h2>
+    <div class="tips">
+      <div class="tip rv"><b>01</b><h3 class="tw"><span class="vi">Ánh sáng</span><span class="en">Light</span></h3><p class="tw"><span class="vi">Sáng gián tiếp, tránh nắng gắt buổi trưa.</span><span class="en">Bright, indirect light; avoid harsh midday sun.</span></p></div>
+      <div class="tip rv"><b>02</b><h3 class="tw"><span class="vi">Tưới nước</span><span class="en">Water</span></h3><p class="tw"><span class="vi">Tưới khi lớp đất mặt khô, không để đọng nước ở đáy chậu.</span><span class="en">Water when the top soil dries; never let water sit in the pot.</span></p></div>
+      <div class="tip rv"><b>03</b><h3 class="tw"><span class="vi">Đất</span><span class="en">Soil</span></h3><p class="tw"><span class="vi">Đất tơi xốp, thoát nước tốt.</span><span class="en">A loose, free-draining mix.</span></p></div>
+      <div class="tip rv"><b>04</b><h3 class="tw"><span class="vi">Lá</span><span class="en">Leaves</span></h3><p class="tw"><span class="vi">Lau lá định kỳ, tránh gió lùa trực tiếp.</span><span class="en">Wipe leaves now and then; keep away from direct drafts.</span></p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="inner">
+      <div class="ask">
+      <h2 class="tw"><span class="vi">Muốn một chiếc lá về nhà?</span><span class="en">Want a leaf to take home?</span></h2>
+      <p class="tw"><span class="vi">Nhắn Pam's Garden để hỏi cây còn hàng, giá và cách nhận.</span><span class="en">Message Pam's Garden to ask what is in stock, the price and how to get it.</span></p>
+      <div class="actions rv">
+        <a class="btn btn-primary" href="https://zalo.me/" rel="noopener"><span class="vi">Nhắn Zalo</span><span class="en">Message on Zalo</span></a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/" rel="noopener">Instagram</a>
+      </div>
+      </div>
+      <blockquote class="quote tw"><span class="vi">Mỗi chiếc lá là một tác phẩm – Mang hơi thở rừng xanh vào từng góc nhỏ nhà bạn.</span><span class="en">Every leaf is a work of art – bringing the breath of the green forest into every corner of your home.</span></blockquote>
+    </div>
+    <footer>
+      <img class="logo" src="assets/img/logo/logo-bone.png" alt="" width="40" height="40">
+      <span>© 2026 Pam's Garden</span>
+      <span class="credit"><span class="vi">Ảnh vệ tinh: NASA GIBS (MODIS) và Copernicus Sentinel-2, 20/03/2024. Chứa dữ liệu Copernicus Sentinel đã chỉnh sửa.</span><span class="en">Satellite imagery: NASA GIBS (MODIS) and Copernicus Sentinel-2, 20 March 2024. Contains modified Copernicus Sentinel data.</span></span>
+    </footer>
+  </section>
+</main>
+</body>
+</html>
