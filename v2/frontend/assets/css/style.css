@@ -93,15 +93,15 @@ html.night .logo-bone{display:block}
 .small{margin:2.4rem 0 0;font:400 1rem/1.6 var(--sans);opacity:.75;max-width:26em}
 
 .pg{padding:14vh var(--g)}
+.pg,.care{overflow-x:clip}
 .pg-in{max-width:1360px;margin:0 auto;display:grid;gap:44px}
 .num{display:block;font:300 clamp(4rem,18vw,12rem)/1 var(--serif);font-variant-numeric:lining-nums;font-feature-settings:"lnum";color:transparent;-webkit-text-stroke:1px var(--ink);opacity:.38;margin-bottom:.4rem;letter-spacing:-.04em}
 .when{margin:0 0 1.2rem;display:flex;align-items:center;gap:12px;font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 .when::before{content:"";width:30px;height:1px;background:currentColor}
 .title{margin:0;font:300 clamp(2.7rem,8vw,6rem)/.95 var(--serif);letter-spacing:-.025em;font-optical-sizing:auto}
-.plate{--ink:#EEF1E6;--accent:#B6D3A8;position:relative;width:fit-content;max-width:100%;box-sizing:border-box;padding:clamp(22px,3vw,40px) clamp(22px,3.2vw,44px);background:#1D3828;color:var(--ink);box-shadow:0 26px 50px -32px rgba(8,20,13,.6);transition:background-color 1.4s ease,color 1.4s ease}
-.plate::before{content:"";position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--ink) 22%,transparent);pointer-events:none}
-html.night .plate{--ink:#10221A;--accent:#2F6B45;background:#D6E2CC}
-.plate .num{opacity:.55}
+.plate{position:relative;isolation:isolate;width:fit-content;max-width:100%;box-sizing:border-box;padding:clamp(18px,2.4vw,32px) clamp(14px,2vw,28px)}
+.plate::before{content:"";position:absolute;left:-12%;bottom:-14%;width:min(124%,34rem);aspect-ratio:5/3;z-index:-1;background:linear-gradient(120deg,color-mix(in srgb,var(--leaf) 46%,var(--paper)),color-mix(in srgb,var(--leaf) 18%,var(--paper)));-webkit-mask:url(../img/leaf.svg) center/contain no-repeat;mask:url(../img/leaf.svg) center/contain no-repeat;transform:rotate(-7deg);transition:background 1.4s ease}
+html.night .plate::before{background:linear-gradient(120deg,color-mix(in srgb,var(--leaf) 55%,var(--paper)),color-mix(in srgb,var(--leaf) 22%,var(--paper)))}
 .plate .latin{margin-bottom:0}
 .pg-text>.plate{margin-bottom:2rem}
 .pg+.pg,.pg+.care{margin-top:12vh}
