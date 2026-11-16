@@ -98,6 +98,9 @@ html.night .logo-bone{display:block}
 .when{margin:0 0 1.2rem;display:flex;align-items:center;gap:12px;font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 .when::before{content:"";width:30px;height:1px;background:currentColor}
 .title{margin:0;font:300 clamp(2.7rem,8vw,6rem)/.95 var(--serif);letter-spacing:-.025em;font-optical-sizing:auto}
+.title,.care h2{width:fit-content;max-width:100%;padding:.14em .38em .2em .3em;background:color-mix(in srgb,var(--leaf) 13%,var(--paper));border-left:5px solid var(--leaf);border-radius:4px}
+.pg+.pg,.pg+.care{margin-top:10vh}
+@media(min-width:900px){.pg+.pg,.pg+.care{margin-top:22vh}}
 .latin{margin:1rem 0 1.8rem;font:italic 300 1.35rem/1.2 var(--serif);color:var(--accent)}
 .pam{margin:1.6rem 0 0;padding-left:1rem;border-left:1px solid var(--accent);max-width:27em;font:italic 300 1.08rem/1.6 var(--serif)}
 .pam b{display:block;margin-bottom:.45rem;font:600 .78rem/1 var(--sans);font-style:normal;letter-spacing:.04em;color:var(--accent)}
@@ -154,7 +157,7 @@ html.night .logo-bone{display:block}
 }
 
 .care{padding:16vh var(--g)}
-.care h2{max-width:1360px;margin:0 auto 7vh;font:300 clamp(2.4rem,7vw,5.4rem)/1 var(--serif);letter-spacing:-.025em}
+.care h2{max-width:100%;margin:0 0 7vh max(0px,calc((100% - 1360px)/2));font:300 clamp(2.4rem,7vw,5.4rem)/1 var(--serif);letter-spacing:-.025em}
 .notes{list-style:none;margin:0 auto;padding:0;max-width:1360px;display:grid;gap:22px}
 .note{position:relative;padding:34px 28px 30px 34px;background:var(--card);color:#13201A;background-image:repeating-linear-gradient(transparent 0 33px,rgba(46,91,62,.16) 33px 34px);border-left:2px solid rgba(47,107,69,.4);box-shadow:0 20px 38px -24px rgba(0,0,0,.6);transform:rotate(var(--r))}
 .js .note.rv{transform:translateY(22px) rotate(var(--r))}
