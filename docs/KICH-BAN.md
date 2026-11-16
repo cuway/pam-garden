@@ -41,7 +41,7 @@
 
 - Bấm hoặc chạm vào ảnh bất kỳ để xem lớn (khung tối, chú thích dưới ảnh); bấm ra ngoài hoặc Esc để đóng.
 - Mỗi ảnh là một khung khác nhau, đã loại ảnh chụp trùng cùng cành hoặc cùng chậu; ảnh được chỉnh màu đồng nhất kiểu Lightroom.
-- Đầu mỗi trang, sau số trang, giờ, tên và tên phụ là một chiếc lá xanh nhạt nằm nghiêng có gân, làm mảng nền cho tiêu đề (ban đêm lá đậm hơn). Giữa hai trang có khoảng trống rộng để mắt nghỉ trước khi sang trang mới. Tiêu đề phần ghi chú chăm cây cũng có lá này. Đã thử khối vuông xanh đậm, bỏ vì thô.
+- Đầu mỗi trang, sau số trang, giờ, tên và tên phụ là một vệt cọ xanh nhạt, mép sần như quét bằng cọ khô, nằm hơi nghiêng dưới tiêu đề (ban đêm đậm hơn). Giữa hai trang có khoảng trống rộng để mắt nghỉ trước khi sang trang mới. Tiêu đề phần ghi chú chăm cây cũng có vệt này. Đã thử khối vuông xanh đậm (thô) và hình chiếc lá có gân (không hợp), đều bỏ.
 - Bố cục: số lớn rỗng, mốc giờ, tên, tên phụ nghiêng, hai đoạn ngắn, ghi chú của Pam (giữ chỗ), ảnh. Trang chẵn đảo bên.
 - Chuyển động: ảnh được "vén" ra từ trên xuống khi vào màn hình, parallax khác tốc độ trên máy tính, vầng nắng di chuyển và đổi màu theo giờ.
 - 3D: trên máy tính, mỗi ảnh là một tờ giấy 3D thật: cong theo tốc độ cuộn, nghiêng và bắt ánh sáng khi rê chuột vào; ba ảnh ở bìa nghiêng theo chuột. Trên điện thoại, dải ảnh vuốt ngang xoay kiểu coverflow.

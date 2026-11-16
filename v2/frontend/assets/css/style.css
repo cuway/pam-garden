@@ -100,8 +100,8 @@ html.night .logo-bone{display:block}
 .when::before{content:"";width:30px;height:1px;background:currentColor}
 .title{margin:0;font:300 clamp(2.7rem,8vw,6rem)/.95 var(--serif);letter-spacing:-.025em;font-optical-sizing:auto}
 .plate{position:relative;isolation:isolate;width:fit-content;max-width:100%;box-sizing:border-box;padding:clamp(18px,2.4vw,32px) clamp(14px,2vw,28px)}
-.plate::before{content:"";position:absolute;left:-12%;bottom:-14%;width:min(124%,34rem);aspect-ratio:5/3;z-index:-1;background:linear-gradient(120deg,color-mix(in srgb,var(--leaf) 46%,var(--paper)),color-mix(in srgb,var(--leaf) 18%,var(--paper)));-webkit-mask:url(../img/leaf.svg) center/contain no-repeat;mask:url(../img/leaf.svg) center/contain no-repeat;transform:rotate(-7deg);transition:background 1.4s ease}
-html.night .plate::before{background:linear-gradient(120deg,color-mix(in srgb,var(--leaf) 55%,var(--paper)),color-mix(in srgb,var(--leaf) 22%,var(--paper)))}
+.plate::before{content:"";position:absolute;left:-7%;bottom:2%;width:min(114%,40rem);aspect-ratio:400/140;z-index:-1;background:color-mix(in srgb,var(--leaf) 30%,var(--paper));-webkit-mask:url(../img/brush.svg) center/100% 100% no-repeat;mask:url(../img/brush.svg) center/100% 100% no-repeat;transform:rotate(-2deg);transition:background-color 1.4s ease}
+html.night .plate::before{background:color-mix(in srgb,var(--leaf) 58%,var(--paper))}
 .plate .latin{margin-bottom:0}
 .pg-text>.plate{margin-bottom:2rem}
 .pg+.pg,.pg+.care{margin-top:12vh}
