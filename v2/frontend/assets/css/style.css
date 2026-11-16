@@ -99,9 +99,9 @@ html.night .logo-bone{display:block}
 .when{margin:0 0 1.2rem;display:flex;align-items:center;gap:12px;font:600 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
 .when::before{content:"";width:30px;height:1px;background:currentColor}
 .title{margin:0;font:300 clamp(2.7rem,8vw,6rem)/.95 var(--serif);letter-spacing:-.025em;font-optical-sizing:auto}
-.plate{position:relative;isolation:isolate;width:fit-content;max-width:100%;box-sizing:border-box;padding:clamp(18px,2.4vw,32px) clamp(14px,2vw,28px)}
-.plate::before{content:"";position:absolute;left:-7%;bottom:2%;width:min(114%,40rem);aspect-ratio:400/140;z-index:-1;background:color-mix(in srgb,var(--leaf) 30%,var(--paper));-webkit-mask:url(../img/brush.svg) center/100% 100% no-repeat;mask:url(../img/brush.svg) center/100% 100% no-repeat;transform:rotate(-2deg);transition:background-color 1.4s ease}
-html.night .plate::before{background:color-mix(in srgb,var(--leaf) 58%,var(--paper))}
+.plate{width:fit-content;max-width:100%}
+.plate h2>span{padding:.32em .45em;margin:0 -.45em;background:url(../img/brush.svg) center/100% 100% no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+html.night .plate h2>span{background-image:url(../img/brush-night.svg)}
 .plate .latin{margin-bottom:0}
 .pg-text>.plate{margin-bottom:2rem}
 .pg+.pg,.pg+.care{margin-top:12vh}
